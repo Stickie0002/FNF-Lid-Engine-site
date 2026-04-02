@@ -1,25 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lid Engine | FNF Engine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lid Engine | Official Site</title>
     <style>
-        body { background: #111; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
-        .container { max-width: 600px; margin: auto; border: 1px solid #333; padding: 40px; border-radius: 15px; background: #181818; }
-        h1 { color: #ff4757; font-size: 3rem; margin-bottom: 10px; }
-        p { color: #888; margin-bottom: 30px; }
-        .btn { display: inline-block; padding: 15px 25px; margin: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
-        .download { background: #ff4757; color: white; }
-        .github { background: #333; color: white; border: 1px solid #555; }
-        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+        /* Modern Theme Variables */
+        :root {
+            --bg: #0b0b0b;
+            --card: #161616;
+            --accent: #ff4757;
+            --text: #ffffff;
+            --nav-bg: rgba(20, 20, 20, 0.95);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--card);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .btn-alt {
+            background: #222;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .nav-links { display: none; } /* Hides links on small phones */
+            h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>LID ENGINE</h1>
-        <p>A custom FNF engine built with Haxe and Python.</p>
-        
-        <a href="https://github.com/Stickie0002/FNF-Lid-Engine-site/releases/download/1.0.2/lid_engine_b102.rar" class="btn download">Download .ZIP</a>
-        <a href="https://github.com/Stickie0002/FNF-LidEngine" class="btn github">Source Code</a>
-    </div>
-</body>
+
+    <nav>
+        <a href="#" class="logo">LID</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#info">Info</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>LID ENGINE</h1>
+            <p class="tagline">Next-Generation FNF Engine built with Haxe & Python.</p>
+            
+            <div class="btn-group">
+                <a href="YOUR_ZIP_LINK" class="btn btn-main">Download .ZIP</a>
+                <a href="YOUR_GITHUB_LINK" class="btn btn-alt">Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    </body>
 </html>
